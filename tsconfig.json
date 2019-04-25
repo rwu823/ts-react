@@ -1,0 +1,12 @@
+{
+  "extends": "@rwu823/ts-base/tsconfig",
+  "exclude": [
+    "node_modules",
+    "out/**/*",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ],
+  "compilerOptions": {
+    "outDir": "out"
+  }
+}
