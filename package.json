@@ -5,29 +5,19 @@
   "license": "MIT",
   "devDependencies": {
     "@ts-mono/base": "rwu823/ts-mono#base/latest",
-    "@types/hard-source-webpack-plugin": "1.0.0",
-    "@types/html-webpack-plugin": "3.2.0",
     "@types/react": "16.8.15",
     "@types/react-dom": "16.8.4",
-    "@types/react-hot-loader": "4.1.0",
     "@types/styled-components": "4.1.14",
-    "@types/webpack": "4.4.29",
-    "@types/webpack-dev-server": "3.1.5",
-    "add-asset-html-webpack-plugin": "3.1.3",
-    "awesome-typescript-loader": "5.2.1",
-    "hard-source-webpack-plugin": "0.13.1",
-    "html-webpack-plugin": "3.2.0",
-    "npm-run-all": "4.1.5",
-    "typescript-plugin-styled-components": "1.4.2",
-    "webpack": "4.30.0",
-    "webpack-cli": "3.3.1",
-    "webpack-dev-server": "3.3.1"
+    "@zeit/next-typescript": "1.1.1",
+    "babel-plugin-styled-components": "1.10.0",
+    "npm-run-all": "4.1.5"
   },
   "scripts": {
     "transcrypt": "curl -s https://raw.githubusercontent.com/elasticdog/transcrypt/master/transcrypt | bash -s --",
     "build:dll": "webpack --config webpack.dll.ts",
     "build:prod": "webpack -p",
-    "dev": "run-s build:dll && webpack-dev-server --hot",
+    "dev": "next src",
+    "export": "rm -rf out && next build src && next export src && mv src/out out",
     "build": "rm -rf out && NODE_ENV=production run-s build:dll build:prod"
   },
   "husky": {
@@ -41,9 +31,9 @@
     ]
   },
   "dependencies": {
+    "next": "8.1.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-hot-loader": "4.8.4",
     "styled-components": "4.2.0"
   }
 }

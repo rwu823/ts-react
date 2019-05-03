@@ -2,3 +2,4 @@ out
 dev/dll.json
 node_modules
 coverage
+.next
