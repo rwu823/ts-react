@@ -1,4 +1,4 @@
-const base = require('@rwu823/ts-base/prettier.config')
+const base = require('@ts-mono/base/prettier.config')
 
 module.exports = Object.assign(base, {
 

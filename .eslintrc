@@ -1,5 +1,5 @@
 {
   "extends": [
-    "./node_modules/@rwu823/ts-base/.eslintrc"
+    "./node_modules/@ts-mono/base/.eslintrc"
   ]
 }
