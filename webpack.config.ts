@@ -12,6 +12,7 @@ import dll from './dev/dll.json'
 
 interface Conf extends Configuration {
   devServer?: DevConf
+  plugins?: any
 }
 
 const { NODE_ENV = 'development' } = process.env
@@ -85,11 +86,13 @@ const Conf: Conf = {
       manifest: dll as any,
       context: __dirname,
     }),
+
     new HtmlWebpackPlugin({
       minify: {
         collapseWhitespace: true,
       },
     }),
+
     new AddAssetHtmlPlugin([
       {
         publicPath: '/public',

@@ -8,7 +8,7 @@ const Div = styled.div`
 
 type Props = {}
 
-const App: React.FunctionComponent<Props> = _props => {
+const App: React.FC<Props> = _props => {
   return <Div>This is TS React App.</Div>
 }
 
